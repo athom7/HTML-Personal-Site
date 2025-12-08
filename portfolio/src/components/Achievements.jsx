@@ -1,7 +1,42 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import { HiTrendingUp, HiUsers, HiLightningBolt, HiCheckCircle } from 'react-icons/hi'
+
+const TiltCard = ({ children, index, isInView, delay = 0 }) => {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const [isHovered, setIsHovered] = useState(false)
+
+  const handleMouseMove = (e) => {
+    const rect = e.currentTarget.getBoundingClientRect()
+    const x = (e.clientX - rect.left - rect.width / 2) / 15
+    const y = (e.clientY - rect.top - rect.height / 2) / 15
+    setMousePosition({ x, y })
+  }
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={isInView ? { opacity: 1, scale: 1 } : {}}
+      transition={{ duration: 0.5, delay: delay + index * 0.1 }}
+      onMouseMove={handleMouseMove}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => {
+        setIsHovered(false)
+        setMousePosition({ x: 0, y: 0 })
+      }}
+      style={{
+        transform: isHovered
+          ? `perspective(1000px) rotateX(${-mousePosition.y}deg) rotateY(${mousePosition.x}deg) scale(1.05)`
+          : 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)',
+        transition: 'transform 0.2s ease-out'
+      }}
+      className="relative group"
+    >
+      {children}
+    </motion.div>
+  )
+}
 
 const Achievements = () => {
   const ref = useRef(null)
@@ -84,23 +119,21 @@ const Achievements = () => {
         <div className="max-w-6xl mx-auto mb-16">
           <div className="grid md:grid-cols-4 gap-6">
             {keyMetrics.map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
-                className="relative group"
-              >
+              <TiltCard key={index} index={index} isInView={isInView} delay={0.2}>
                 <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 text-center">
-                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br ${item.color} mb-4 group-hover:scale-110 transition-transform`}>
+                  <motion.div
+                    className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br ${item.color} mb-4 transition-transform`}
+                    whileHover={{ rotate: 360, scale: 1.2 }}
+                    transition={{ duration: 0.6 }}
+                  >
                     <item.icon className="text-white text-3xl" />
-                  </div>
+                  </motion.div>
                   <div className={`text-4xl font-bold bg-gradient-to-r ${item.color} bg-clip-text text-transparent mb-2`}>
                     {item.metric}
                   </div>
                   <p className="text-slate-400 text-sm">{item.description}</p>
                 </div>
-              </motion.div>
+              </TiltCard>
             ))}
           </div>
         </div>

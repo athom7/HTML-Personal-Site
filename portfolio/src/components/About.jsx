@@ -1,7 +1,44 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import { HiLightningBolt, HiUserGroup, HiChartBar } from 'react-icons/hi'
+
+const TiltCard = ({ children, index, isInView }) => {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const [isHovered, setIsHovered] = useState(false)
+
+  const handleMouseMove = (e) => {
+    const rect = e.currentTarget.getBoundingClientRect()
+    const x = (e.clientX - rect.left - rect.width / 2) / 15
+    const y = (e.clientY - rect.top - rect.height / 2) / 15
+    setMousePosition({ x, y })
+  }
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+      onMouseMove={handleMouseMove}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => {
+        setIsHovered(false)
+        setMousePosition({ x: 0, y: 0 })
+      }}
+      style={{
+        transform: isHovered
+          ? `perspective(1000px) rotateX(${-mousePosition.y}deg) rotateY(${mousePosition.x}deg) scale(1.05)`
+          : 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)',
+        transition: 'transform 0.2s ease-out'
+      }}
+      className={`bg-gradient-to-br from-slate-900 to-slate-800 rounded-xl p-6 border transition-all duration-300 group ${
+        isHovered ? 'border-cyan-500/50 shadow-lg shadow-cyan-500/20' : 'border-slate-700/50 hover:border-cyan-500/50'
+      }`}
+    >
+      {children}
+    </motion.div>
+  )
+}
 
 const About = () => {
   const ref = useRef(null)
@@ -72,19 +109,17 @@ const About = () => {
 
           <div className="grid md:grid-cols-3 gap-6">
             {highlights.map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-                className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 group"
-              >
-                <div className="bg-gradient-to-br from-cyan-500/20 to-blue-600/20 w-14 h-14 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <TiltCard key={index} index={index} isInView={isInView}>
+                <motion.div
+                  className="bg-gradient-to-br from-cyan-500/20 to-blue-600/20 w-14 h-14 rounded-lg flex items-center justify-center mb-4 transition-transform"
+                  whileHover={{ scale: 1.2, rotate: 360 }}
+                  transition={{ duration: 0.6 }}
+                >
                   <item.icon className="text-cyan-400 text-2xl" />
-                </div>
+                </motion.div>
                 <h3 className="text-xl font-semibold text-slate-100 mb-2">{item.title}</h3>
                 <p className="text-slate-400">{item.description}</p>
-              </motion.div>
+              </TiltCard>
             ))}
           </div>
         </div>
