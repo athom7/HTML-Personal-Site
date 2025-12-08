@@ -8,8 +8,8 @@ const Navigation = ({ activeSection }) => {
   const navItems = [
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
-    { name: 'Experience', href: '#experience' },
     { name: 'Skills', href: '#skills' },
+    { name: 'Experience', href: '#experience' },
     { name: 'Achievements', href: '#achievements' },
     { name: 'Contact', href: '#contact' },
   ]

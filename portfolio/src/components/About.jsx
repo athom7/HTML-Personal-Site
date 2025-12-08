@@ -10,18 +10,18 @@ const About = () => {
   const highlights = [
     {
       icon: HiLightningBolt,
-      title: 'Digital Transformation',
-      description: 'Leading CRM implementation and digital adoption initiatives across commercial operations'
+      title: 'Solving Complex Challenges',
+      description: 'I love taking tangled business problems and finding elegant digital solutions that just make sense'
     },
     {
       icon: HiUserGroup,
-      title: 'Workshop Facilitation',
-      description: 'Expert in translating stakeholder needs through structured workshops and cross-functional collaboration'
+      title: 'Enabling Teams',
+      description: 'Nothing beats facilitating breakthroughs — when stakeholders realize technology can actually work for them'
     },
     {
       icon: HiChartBar,
-      title: 'Process Excellence',
-      description: 'Proven track record of optimizing business processes to drive measurable KPI improvements'
+      title: 'Driving Real Impact',
+      description: 'I\'m motivated by results you can measure — turning process improvements into business growth'
     }
   ]
 
@@ -48,20 +48,22 @@ const About = () => {
             className="bg-slate-900/50 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-slate-700/50 mb-12"
           >
             <p className="text-lg text-slate-300 leading-relaxed mb-6">
-              With over <span className="text-cyan-400 font-semibold">five years of experience</span> as a
-              Commercial Excellence Specialist, I translate business needs into digital solutions, bridging
-              commercial operations and IT.
+              <span className="text-cyan-400 font-semibold">What motivates me?</span> I'm energized by the challenge
+              of being the bridge between business and technology. Over five years as a Commercial Excellence Specialist,
+              I've discovered my passion lies in translating what stakeholders need into what technology can deliver —
+              turning frustration into clarity, complexity into action.
             </p>
             <p className="text-lg text-slate-300 leading-relaxed mb-6">
-              At <span className="text-cyan-400 font-semibold">PPG Coatings Denmark</span>, I led Denmark
-              to the top EMEA ranking in nine KPIs through process optimization, targeted workshops, and
-              cross-functional collaboration.
+              At <span className="text-cyan-400 font-semibold">PPG Coatings Denmark</span>, I experienced what drives
+              me most: watching teams transform. When I facilitated workshops with 24 store managers and we achieved
+              <span className="text-cyan-400 font-semibold"> #1 in EMEA across nine KPIs</span>, it wasn't just about
+              the numbers — it was about seeing people empowered by better processes and digital tools that actually work.
             </p>
             <p className="text-lg text-slate-300 leading-relaxed">
-              My strengths include <span className="text-cyan-400 font-semibold">process mapping</span>,
-              <span className="text-cyan-400 font-semibold"> stakeholder enablement</span>, and
-              <span className="text-cyan-400 font-semibold"> strategic alignment</span> to drive effective
-              digital transformation.
+              I'm drawn to organizations that value <span className="text-cyan-400 font-semibold">continuous improvement</span>
+              and want to unlock their teams' potential. My approach combines
+              <span className="text-cyan-400 font-semibold"> structured process thinking</span> with genuine curiosity
+              about how people work best — because the right digital solution isn't just technically sound, it's human-centered.
             </p>
           </motion.div>
 

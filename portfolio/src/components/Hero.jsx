@@ -64,8 +64,9 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="text-lg md:text-xl text-slate-400 mb-8 max-w-2xl mx-auto leading-relaxed"
           >
-            Transforming business needs into digital solutions. Bridging commercial operations and IT
-            to drive measurable impact through process optimization and strategic stakeholder management.
+            I thrive at the intersection of business and technology — where I translate complex needs into
+            simple, effective digital solutions. What drives me is seeing teams unlock their potential through
+            better processes and watching abstract challenges transform into measurable business growth.
           </motion.p>
 
           <motion.div

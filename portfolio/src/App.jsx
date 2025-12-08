@@ -12,7 +12,7 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'experience', 'skills', 'achievements', 'contact']
+      const sections = ['home', 'about', 'skills', 'experience', 'achievements', 'contact']
       const current = sections.find(section => {
         const element = document.getElementById(section)
         if (element) {
@@ -33,8 +33,8 @@ function App() {
       <Navigation activeSection={activeSection} />
       <Hero />
       <About />
-      <Experience />
       <Skills />
+      <Experience />
       <Achievements />
       <Contact />
     </div>
