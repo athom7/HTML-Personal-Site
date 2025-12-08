@@ -2,17 +2,15 @@ import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 import {
-  SiSalesforce,
-  SiMicrosoft,
-  SiAmazonaws,
-  SiPowerbi
-} from 'react-icons/si'
-import {
   HiChartBar,
   HiUserGroup,
   HiLightningBolt,
   HiGlobe,
-  HiCode
+  HiCode,
+  HiDatabase,
+  HiPresentationChartBar,
+  HiCloud,
+  HiServer
 } from 'react-icons/hi'
 
 const Skills = () => {
@@ -24,15 +22,15 @@ const Skills = () => {
       title: 'CRM & Platforms',
       skills: [
         { name: 'SAP Cloud for Customer', icon: HiCode, level: 95 },
-        { name: 'Salesforce', icon: SiSalesforce, level: 85 },
-        { name: 'Microsoft Dynamics', icon: SiMicrosoft, level: 80 },
+        { name: 'Salesforce', icon: HiServer, level: 85 },
+        { name: 'Microsoft Dynamics', icon: HiDatabase, level: 80 },
         { name: 'Showpad Integration', icon: HiLightningBolt, level: 90 }
       ]
     },
     {
       title: 'Analytics & BI',
       skills: [
-        { name: 'Power BI', icon: SiPowerbi, level: 90 },
+        { name: 'Power BI', icon: HiPresentationChartBar, level: 90 },
         { name: 'Advanced Excel', icon: HiChartBar, level: 95 },
         { name: 'Data Visualization', icon: HiChartBar, level: 85 },
         { name: 'KPI Development', icon: HiChartBar, level: 90 }
@@ -50,7 +48,7 @@ const Skills = () => {
     {
       title: 'Cloud & Technology',
       skills: [
-        { name: 'AWS Cloud Fundamentals', icon: SiAmazonaws, level: 70 },
+        { name: 'AWS Cloud Fundamentals', icon: HiCloud, level: 70 },
         { name: 'API Integration', icon: HiCode, level: 85 },
         { name: 'Middleware Solutions', icon: HiLightningBolt, level: 80 }
       ]
