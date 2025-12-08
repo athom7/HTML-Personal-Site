@@ -32,7 +32,7 @@ const TiltCard = ({ children, index, isInView }) => {
         transition: 'transform 0.2s ease-out'
       }}
       className={`bg-gradient-to-br from-slate-900 to-slate-800 rounded-xl p-6 border transition-all duration-300 group ${
-        isHovered ? 'border-cyan-500/50 shadow-lg shadow-cyan-500/20' : 'border-slate-700/50 hover:border-cyan-500/50'
+        isHovered ? 'border-blue-600/50 shadow-lg shadow-blue-600/20' : 'border-slate-700/50 hover:border-blue-600/50'
       }`}
     >
       {children}
@@ -74,7 +74,7 @@ const About = () => {
           <h2 className="text-4xl md:text-5xl font-display font-bold text-gradient mb-4">
             About Me
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-blue-600 mx-auto rounded-full"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-700 to-blue-400 mx-auto rounded-full"></div>
         </motion.div>
 
         <div className="max-w-4xl mx-auto">
@@ -85,24 +85,24 @@ const About = () => {
             className="bg-slate-900/50 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-slate-700/50 mb-12"
           >
             <p className="text-lg text-slate-300 leading-relaxed mb-6">
-              <span className="text-cyan-400 font-semibold">What motivates me?</span> I'm energized by the challenge
+              <span className="text-blue-400 font-semibold">What motivates me?</span> I'm energized by the challenge
               of being the bridge between business and technology. Over five years leading
-              <span className="text-cyan-400 font-semibold"> business transformation</span> and
-              <span className="text-cyan-400 font-semibold"> digital operations</span> initiatives,
+              <span className="text-blue-400 font-semibold"> business transformation</span> and
+              <span className="text-blue-400 font-semibold"> digital operations</span> initiatives,
               I've discovered my passion lies in translating stakeholder needs into actionable solutions —
               turning organizational complexity into streamlined, data-driven processes.
             </p>
             <p className="text-lg text-slate-300 leading-relaxed mb-6">
-              At <span className="text-cyan-400 font-semibold">PPG Coatings Denmark</span>, I experienced what drives
+              At <span className="text-blue-400 font-semibold">PPG Coatings Denmark</span>, I experienced what drives
               me most: watching teams transform. When I facilitated workshops with 24 store managers and we achieved
-              <span className="text-cyan-400 font-semibold"> #1 in EMEA across nine KPIs</span>, it wasn't just about
+              <span className="text-blue-400 font-semibold"> #1 in EMEA across nine KPIs</span>, it wasn't just about
               the numbers — it was about seeing people empowered by better processes and digital tools that actually work.
             </p>
             <p className="text-lg text-slate-300 leading-relaxed">
-              I'm drawn to organizations that value <span className="text-cyan-400 font-semibold">operational excellence</span>
-              and want to unlock their teams' potential through <span className="text-cyan-400 font-semibold">change management</span>.
-              My approach combines <span className="text-cyan-400 font-semibold">business process optimization</span>,
-              <span className="text-cyan-400 font-semibold"> cross-functional leadership</span>, and genuine curiosity
+              I'm drawn to organizations that value <span className="text-blue-400 font-semibold">operational excellence</span>
+              and want to unlock their teams' potential through <span className="text-blue-400 font-semibold">change management</span>.
+              My approach combines <span className="text-blue-400 font-semibold">business process optimization</span>,
+              <span className="text-blue-400 font-semibold"> cross-functional leadership</span>, and genuine curiosity
               about how people work best — because effective digital transformation isn't just technically sound, it's human-centered.
             </p>
           </motion.div>
@@ -111,11 +111,11 @@ const About = () => {
             {highlights.map((item, index) => (
               <TiltCard key={index} index={index} isInView={isInView}>
                 <motion.div
-                  className="bg-gradient-to-br from-cyan-500/20 to-blue-600/20 w-14 h-14 rounded-lg flex items-center justify-center mb-4 transition-transform"
+                  className="bg-gradient-to-br from-blue-700/20 to-blue-500/20 w-14 h-14 rounded-lg flex items-center justify-center mb-4 transition-transform"
                   whileHover={{ scale: 1.2, rotate: 360 }}
                   transition={{ duration: 0.6 }}
                 >
-                  <item.icon className="text-cyan-400 text-2xl" />
+                  <item.icon className="text-blue-400 text-2xl" />
                 </motion.div>
                 <h3 className="text-xl font-semibold text-slate-100 mb-2">{item.title}</h3>
                 <p className="text-slate-400">{item.description}</p>

@@ -69,14 +69,14 @@ const Experience = () => {
           <h2 className="text-4xl md:text-5xl font-display font-bold text-gradient mb-4">
             Experience
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-blue-600 mx-auto rounded-full"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-700 to-blue-400 mx-auto rounded-full"></div>
         </motion.div>
 
         <div className="max-w-5xl mx-auto mb-20">
           <h3 className="text-2xl font-semibold text-slate-200 mb-8">Work Experience</h3>
           <div className="relative">
             {/* Timeline line */}
-            <div className="hidden md:block absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-cyan-500 to-blue-600"></div>
+            <div className="hidden md:block absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-700 to-blue-400"></div>
 
             {experiences.map((exp, index) => (
               <motion.div
@@ -87,19 +87,19 @@ const Experience = () => {
                 className="relative mb-12 md:ml-20"
               >
                 {/* Timeline dot */}
-                <div className="hidden md:flex absolute -left-[4.5rem] top-6 w-12 h-12 rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 items-center justify-center shadow-lg shadow-cyan-500/50">
+                <div className="hidden md:flex absolute -left-[4.5rem] top-6 w-12 h-12 rounded-full bg-gradient-to-br from-blue-700 to-blue-400 items-center justify-center shadow-lg shadow-blue-600/50">
                   <exp.icon className="text-white text-xl" />
                 </div>
 
-                <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-xl p-6 md:p-8 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300">
+                <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-xl p-6 md:p-8 border border-slate-700/50 hover:border-blue-600/50 transition-all duration-300">
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                     <div>
-                      <h3 className="text-2xl font-semibold text-cyan-400 mb-2">{exp.title}</h3>
+                      <h3 className="text-2xl font-semibold text-blue-400 mb-2">{exp.title}</h3>
                       <p className="text-lg text-slate-300 font-medium">{exp.company}</p>
                       <p className="text-slate-400">{exp.location}</p>
                     </div>
                     <div className="mt-2 md:mt-0">
-                      <span className="inline-block px-4 py-2 bg-cyan-500/20 text-cyan-400 rounded-lg font-semibold">
+                      <span className="inline-block px-4 py-2 bg-blue-600/20 text-blue-400 rounded-lg font-semibold">
                         {exp.period}
                       </span>
                     </div>
@@ -108,7 +108,7 @@ const Experience = () => {
                   <ul className="space-y-2">
                     {exp.responsibilities.map((resp, idx) => (
                       <li key={idx} className="flex items-start">
-                        <span className="text-cyan-400 mr-2 mt-1">▹</span>
+                        <span className="text-blue-400 mr-2 mt-1">▹</span>
                         <span className="text-slate-300">{resp}</span>
                       </li>
                     ))}
@@ -128,9 +128,9 @@ const Experience = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
-                className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300"
+                className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-xl p-6 border border-slate-700/50 hover:border-blue-600/50 transition-all duration-300"
               >
-                <div className="text-cyan-400 font-bold text-lg mb-2">{edu.year}</div>
+                <div className="text-blue-400 font-bold text-lg mb-2">{edu.year}</div>
                 <h4 className="text-slate-200 font-semibold mb-1">{edu.degree}</h4>
                 <p className="text-slate-400 text-sm">{edu.field}</p>
               </motion.div>

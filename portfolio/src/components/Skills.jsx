@@ -42,7 +42,7 @@ const SkillCard = ({ category, catIndex, isInView, children }) => {
         transition: 'transform 0.2s ease-out'
       }}
       className={`bg-gradient-to-br from-slate-900 to-slate-800 rounded-xl p-6 border transition-all duration-300 ${
-        isHovered ? 'border-cyan-500/50 shadow-lg shadow-cyan-500/20' : 'border-slate-700/50'
+        isHovered ? 'border-blue-600/50 shadow-lg shadow-blue-600/20' : 'border-slate-700/50'
       }`}
     >
       {children}
@@ -118,7 +118,7 @@ const Skills = () => {
           <h2 className="text-4xl md:text-5xl font-display font-bold text-gradient mb-4">
             Skills & Expertise
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-blue-600 mx-auto rounded-full"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-700 to-blue-400 mx-auto rounded-full"></div>
         </motion.div>
 
         <div className="max-w-6xl mx-auto">
@@ -126,7 +126,7 @@ const Skills = () => {
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {skillCategories.map((category, catIndex) => (
               <SkillCard key={catIndex} category={category} catIndex={catIndex} isInView={isInView}>
-                <h3 className="text-xl font-semibold text-cyan-400 mb-4">{category.title}</h3>
+                <h3 className="text-xl font-semibold text-blue-400 mb-4">{category.title}</h3>
                 <div className="space-y-4">
                   {category.skills.map((skill, skillIndex) => (
                     <div key={skillIndex} className="group">
@@ -136,7 +136,7 @@ const Skills = () => {
                             whileHover={{ rotate: 360, scale: 1.2 }}
                             transition={{ duration: 0.5 }}
                           >
-                            <skill.icon className="text-cyan-400 transition-all duration-300 group-hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.6)]" />
+                            <skill.icon className="text-blue-400 transition-all duration-300 group-hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.6)]" />
                           </motion.div>
                           <span className="text-slate-300">{skill.name}</span>
                         </div>
@@ -147,7 +147,7 @@ const Skills = () => {
                           initial={{ width: 0 }}
                           animate={isInView ? { width: `${skill.level}%` } : {}}
                           transition={{ duration: 1, delay: 0.5 + catIndex * 0.1 + skillIndex * 0.05 }}
-                          className="h-full bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full relative group-hover:shadow-[0_0_12px_rgba(34,211,238,0.8)] transition-shadow duration-300"
+                          className="h-full bg-gradient-to-r from-blue-700 to-blue-400 rounded-full relative group-hover:shadow-[0_0_12px_rgba(59,130,246,0.8)] transition-shadow duration-300"
                         >
                           {/* Shimmer effect */}
                           <motion.div
@@ -175,8 +175,8 @@ const Skills = () => {
             {/* Languages */}
             <SkillCard category={{ title: 'Languages' }} catIndex={4} isInView={isInView}>
               <div className="flex items-center gap-2 mb-4">
-                <HiGlobe className="text-cyan-400 text-2xl" />
-                <h3 className="text-xl font-semibold text-cyan-400">Languages</h3>
+                <HiGlobe className="text-blue-400 text-2xl" />
+                <h3 className="text-xl font-semibold text-blue-400">Languages</h3>
               </div>
               <div className="space-y-4">
                 {languages.map((lang, index) => (
@@ -190,7 +190,7 @@ const Skills = () => {
                         initial={{ width: 0 }}
                         animate={isInView ? { width: `${lang.level}%` } : {}}
                         transition={{ duration: 1, delay: 0.8 + index * 0.1 }}
-                        className="h-full bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full relative group-hover:shadow-[0_0_12px_rgba(34,211,238,0.8)] transition-shadow duration-300"
+                        className="h-full bg-gradient-to-r from-blue-700 to-blue-400 rounded-full relative group-hover:shadow-[0_0_12px_rgba(59,130,246,0.8)] transition-shadow duration-300"
                       >
                         {/* Shimmer effect */}
                         <motion.div
@@ -214,8 +214,8 @@ const Skills = () => {
             {/* Soft Skills */}
             <SkillCard category={{ title: 'Professional Skills' }} catIndex={5} isInView={isInView}>
               <div className="flex items-center gap-2 mb-4">
-                <HiUserGroup className="text-cyan-400 text-2xl" />
-                <h3 className="text-xl font-semibold text-cyan-400">Professional Skills</h3>
+                <HiUserGroup className="text-blue-400 text-2xl" />
+                <h3 className="text-xl font-semibold text-blue-400">Professional Skills</h3>
               </div>
               <div className="grid grid-cols-1 gap-3">
                 {softSkills.map((skill, index) => (
@@ -228,7 +228,7 @@ const Skills = () => {
                     className="flex items-center gap-2 text-slate-300 cursor-default"
                   >
                     <motion.span
-                      className="text-cyan-400"
+                      className="text-blue-400"
                       whileHover={{ scale: 1.3, rotate: 90 }}
                       transition={{ duration: 0.3 }}
                     >

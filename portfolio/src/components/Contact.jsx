@@ -14,7 +14,7 @@ const Contact = () => {
       label: 'Email',
       value: 'andreasthomsen7@icloud.com',
       href: 'mailto:andreasthomsen7@icloud.com',
-      color: 'from-cyan-500 to-blue-600'
+      color: 'from-blue-700 to-blue-400'
     },
     {
       icon: HiPhone,
@@ -55,7 +55,7 @@ const Contact = () => {
             repeat: Infinity,
             ease: "linear"
           }}
-          className="absolute -top-1/2 -right-1/2 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl"
+          className="absolute -top-1/2 -right-1/2 w-96 h-96 bg-blue-600/5 rounded-full blur-3xl"
         />
       </div>
 
@@ -69,7 +69,7 @@ const Contact = () => {
           <h2 className="text-4xl md:text-5xl font-display font-bold text-gradient mb-4">
             Get In Touch
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-blue-600 mx-auto rounded-full mb-6"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-700 to-blue-400 mx-auto rounded-full mb-6"></div>
           <p className="text-lg text-slate-300 max-w-2xl mx-auto">
             I'm always open to discussing new opportunities, collaborations, or just having a conversation
             about digital transformation and process excellence.
@@ -89,13 +89,13 @@ const Contact = () => {
                 {info.href ? (
                   <a
                     href={info.href}
-                    className="block bg-gradient-to-br from-slate-900 to-slate-800 rounded-xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 group text-center"
+                    className="block bg-gradient-to-br from-slate-900 to-slate-800 rounded-xl p-6 border border-slate-700/50 hover:border-blue-600/50 transition-all duration-300 group text-center"
                   >
                     <div className={`inline-flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br ${info.color} mb-4 group-hover:scale-110 transition-transform`}>
                       <info.icon className="text-white text-2xl" />
                     </div>
                     <h3 className="text-slate-400 text-sm mb-1">{info.label}</h3>
-                    <p className="text-slate-200 font-medium group-hover:text-cyan-400 transition-colors">
+                    <p className="text-slate-200 font-medium group-hover:text-blue-400 transition-colors">
                       {info.value}
                     </p>
                   </a>
@@ -129,7 +129,7 @@ const Contact = () => {
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
-                  className={`bg-gradient-to-br from-slate-900 to-slate-800 p-4 rounded-full border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 ${social.color}`}
+                  className={`bg-gradient-to-br from-slate-900 to-slate-800 p-4 rounded-full border border-slate-700/50 hover:border-blue-600/50 transition-all duration-300 ${social.color}`}
                 >
                   <social.icon className="text-3xl text-slate-300" />
                 </motion.a>
@@ -142,7 +142,7 @@ const Contact = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.7 }}
-            className="mt-12 text-center bg-gradient-to-br from-cyan-500/10 to-blue-600/10 rounded-2xl p-8 border border-cyan-500/20"
+            className="mt-12 text-center bg-gradient-to-br from-blue-600/10 to-blue-600/10 rounded-2xl p-8 border border-blue-600/20"
           >
             <h3 className="text-2xl font-bold text-slate-100 mb-3">
               Ready to Transform Your Business Processes?
@@ -153,7 +153,7 @@ const Contact = () => {
             </p>
             <a
               href="mailto:andreasthomsen7@icloud.com"
-              className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300"
+              className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-blue-700 to-blue-400 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-600/50 transition-all duration-300"
             >
               <HiMail />
               Send Me an Email

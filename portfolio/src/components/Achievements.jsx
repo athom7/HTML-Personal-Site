@@ -47,7 +47,7 @@ const Achievements = () => {
       icon: HiTrendingUp,
       metric: '#1 in EMEA',
       description: 'Across 9 KPIs',
-      color: 'from-cyan-500 to-blue-600'
+      color: 'from-blue-700 to-blue-400'
     },
     {
       icon: HiLightningBolt,
@@ -112,7 +112,7 @@ const Achievements = () => {
           <h2 className="text-4xl md:text-5xl font-display font-bold text-gradient mb-4">
             Key Achievements
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-blue-600 mx-auto rounded-full"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-700 to-blue-400 mx-auto rounded-full"></div>
         </motion.div>
 
         {/* Key Metrics */}
@@ -120,7 +120,7 @@ const Achievements = () => {
           <div className="grid md:grid-cols-4 gap-6">
             {keyMetrics.map((item, index) => (
               <TiltCard key={index} index={index} isInView={isInView} delay={0.2}>
-                <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 text-center">
+                <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-xl p-6 border border-slate-700/50 hover:border-blue-600/50 transition-all duration-300 text-center">
                   <motion.div
                     className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br ${item.color} mb-4 transition-transform`}
                     whileHover={{ rotate: 360, scale: 1.2 }}
@@ -148,18 +148,18 @@ const Achievements = () => {
                 initial={{ opacity: 0, x: -20 }}
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
-                className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 group"
+                className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-xl p-6 border border-slate-700/50 hover:border-blue-600/50 transition-all duration-300 group"
               >
-                <h4 className="text-xl font-semibold text-cyan-400 mb-3 group-hover:text-cyan-300 transition-colors">
+                <h4 className="text-xl font-semibold text-blue-400 mb-3 group-hover:text-blue-300 transition-colors">
                   {achievement.title}
                 </h4>
                 <p className="text-slate-300 mb-3 leading-relaxed">
                   {achievement.description}
                 </p>
-                <div className="flex items-start gap-2 bg-slate-800/50 rounded-lg p-3 border-l-4 border-cyan-500">
-                  <HiCheckCircle className="text-cyan-400 mt-1 flex-shrink-0" />
+                <div className="flex items-start gap-2 bg-slate-800/50 rounded-lg p-3 border-l-4 border-blue-600">
+                  <HiCheckCircle className="text-blue-400 mt-1 flex-shrink-0" />
                   <p className="text-slate-200 font-medium">
-                    <span className="text-cyan-400">Impact:</span> {achievement.impact}
+                    <span className="text-blue-400">Impact:</span> {achievement.impact}
                   </p>
                 </div>
               </motion.div>
@@ -175,7 +175,7 @@ const Achievements = () => {
             transition={{ duration: 0.6, delay: 0.9 }}
             className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-xl p-8 border border-slate-700/50"
           >
-            <h3 className="text-2xl font-semibold text-cyan-400 mb-6">Certifications & Continuing Education</h3>
+            <h3 className="text-2xl font-semibold text-blue-400 mb-6">Certifications & Continuing Education</h3>
             <div className="grid md:grid-cols-2 gap-4">
               {certifications.map((cert, index) => (
                 <motion.div
@@ -185,7 +185,7 @@ const Achievements = () => {
                   transition={{ duration: 0.4, delay: 1 + index * 0.05 }}
                   className="flex items-center gap-3 text-slate-300 bg-slate-800/50 rounded-lg p-3"
                 >
-                  <HiCheckCircle className="text-cyan-400 text-xl flex-shrink-0" />
+                  <HiCheckCircle className="text-blue-400 text-xl flex-shrink-0" />
                   <span>{cert}</span>
                 </motion.div>
               ))}

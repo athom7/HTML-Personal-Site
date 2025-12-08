@@ -20,7 +20,7 @@ const Hero = () => {
             repeat: Infinity,
             ease: "linear"
           }}
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"
+          className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl"
         />
         <motion.div
           animate={{
@@ -78,7 +78,7 @@ const Hero = () => {
           >
             <a
               href="#contact"
-              className="group px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 flex items-center gap-2"
+              className="group px-8 py-3 bg-gradient-to-r from-blue-700 to-blue-400 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-600/50 transition-all duration-300 flex items-center gap-2"
             >
               <HiMail className="group-hover:scale-110 transition-transform" />
               Get in Touch
@@ -87,7 +87,7 @@ const Hero = () => {
               href="https://linkedin.com/in/andreasthomsen7"
               target="_blank"
               rel="noopener noreferrer"
-              className="group px-8 py-3 border-2 border-slate-600 text-slate-300 rounded-lg font-semibold hover:border-cyan-500 hover:text-cyan-400 transition-all duration-300 flex items-center gap-2"
+              className="group px-8 py-3 border-2 border-slate-600 text-slate-300 rounded-lg font-semibold hover:border-blue-600 hover:text-blue-400 transition-all duration-300 flex items-center gap-2"
             >
               <FaLinkedin className="group-hover:scale-110 transition-transform" />
               LinkedIn Profile
@@ -104,7 +104,7 @@ const Hero = () => {
               <motion.div
                 animate={{ y: [0, 10, 0] }}
                 transition={{ duration: 1.5, repeat: Infinity }}
-                className="text-cyan-400 hover:text-cyan-300 transition-colors"
+                className="text-blue-400 hover:text-blue-300 transition-colors"
               >
                 <HiArrowDown size={32} />
               </motion.div>

@@ -38,8 +38,8 @@ const Navigation = ({ activeSection }) => {
                 href={item.href}
                 className={`transition-colors duration-300 ${
                   activeSection === item.href.slice(1)
-                    ? 'text-cyan-400 font-semibold'
-                    : 'text-slate-300 hover:text-cyan-400'
+                    ? 'text-blue-400 font-semibold'
+                    : 'text-slate-300 hover:text-blue-400'
                 }`}
               >
                 {item.name}
@@ -50,7 +50,7 @@ const Navigation = ({ activeSection }) => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-slate-300 hover:text-cyan-400 transition-colors"
+            className="md:hidden text-slate-300 hover:text-blue-400 transition-colors"
           >
             {isOpen ? <HiX size={28} /> : <HiMenu size={28} />}
           </button>
@@ -71,8 +71,8 @@ const Navigation = ({ activeSection }) => {
                 onClick={() => setIsOpen(false)}
                 className={`block py-2 transition-colors duration-300 ${
                   activeSection === item.href.slice(1)
-                    ? 'text-cyan-400 font-semibold'
-                    : 'text-slate-300 hover:text-cyan-400'
+                    ? 'text-blue-400 font-semibold'
+                    : 'text-slate-300 hover:text-blue-400'
                 }`}
               >
                 {item.name}
