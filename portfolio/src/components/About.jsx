@@ -10,18 +10,18 @@ const About = () => {
   const highlights = [
     {
       icon: HiLightningBolt,
-      title: 'Solving Complex Challenges',
-      description: 'I love taking tangled business problems and finding elegant digital solutions that just make sense'
+      title: 'Business Transformation',
+      description: 'I love driving digital transformation — taking complex business challenges and creating elegant solutions through process optimization'
     },
     {
       icon: HiUserGroup,
-      title: 'Enabling Teams',
-      description: 'Nothing beats facilitating breakthroughs — when stakeholders realize technology can actually work for them'
+      title: 'Cross-Functional Leadership',
+      description: 'Nothing beats leading change management initiatives — when stakeholders realize technology can enable their success'
     },
     {
       icon: HiChartBar,
-      title: 'Driving Real Impact',
-      description: 'I\'m motivated by results you can measure — turning process improvements into business growth'
+      title: 'Data-Driven Results',
+      description: 'I\'m motivated by measurable impact — leveraging business intelligence to turn operational improvements into growth'
     }
   ]
 
@@ -49,9 +49,11 @@ const About = () => {
           >
             <p className="text-lg text-slate-300 leading-relaxed mb-6">
               <span className="text-cyan-400 font-semibold">What motivates me?</span> I'm energized by the challenge
-              of being the bridge between business and technology. Over five years as a Commercial Excellence Specialist,
-              I've discovered my passion lies in translating what stakeholders need into what technology can deliver —
-              turning frustration into clarity, complexity into action.
+              of being the bridge between business and technology. Over five years leading
+              <span className="text-cyan-400 font-semibold"> business transformation</span> and
+              <span className="text-cyan-400 font-semibold"> digital operations</span> initiatives,
+              I've discovered my passion lies in translating stakeholder needs into actionable solutions —
+              turning organizational complexity into streamlined, data-driven processes.
             </p>
             <p className="text-lg text-slate-300 leading-relaxed mb-6">
               At <span className="text-cyan-400 font-semibold">PPG Coatings Denmark</span>, I experienced what drives
@@ -60,10 +62,11 @@ const About = () => {
               the numbers — it was about seeing people empowered by better processes and digital tools that actually work.
             </p>
             <p className="text-lg text-slate-300 leading-relaxed">
-              I'm drawn to organizations that value <span className="text-cyan-400 font-semibold">continuous improvement</span>
-              and want to unlock their teams' potential. My approach combines
-              <span className="text-cyan-400 font-semibold"> structured process thinking</span> with genuine curiosity
-              about how people work best — because the right digital solution isn't just technically sound, it's human-centered.
+              I'm drawn to organizations that value <span className="text-cyan-400 font-semibold">operational excellence</span>
+              and want to unlock their teams' potential through <span className="text-cyan-400 font-semibold">change management</span>.
+              My approach combines <span className="text-cyan-400 font-semibold">business process optimization</span>,
+              <span className="text-cyan-400 font-semibold"> cross-functional leadership</span>, and genuine curiosity
+              about how people work best — because effective digital transformation isn't just technically sound, it's human-centered.
             </p>
           </motion.div>
 

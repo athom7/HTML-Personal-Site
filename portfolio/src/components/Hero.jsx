@@ -54,7 +54,7 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <h2 className="text-2xl md:text-3xl font-semibold text-slate-300 mb-4">
-              Commercial Excellence Specialist
+              Business Transformation · Digital Operations · Change Management
             </h2>
           </motion.div>
 
@@ -64,9 +64,10 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="text-lg md:text-xl text-slate-400 mb-8 max-w-2xl mx-auto leading-relaxed"
           >
-            I thrive at the intersection of business and technology — where I translate complex needs into
-            simple, effective digital solutions. What drives me is seeing teams unlock their potential through
-            better processes and watching abstract challenges transform into measurable business growth.
+            I thrive at the intersection of business and technology — driving digital transformation by
+            translating complex stakeholder needs into effective solutions. What motivates me is leading
+            cross-functional teams through change management, optimizing business processes, and watching
+            abstract challenges transform into measurable business growth.
           </motion.p>
 
           <motion.div
