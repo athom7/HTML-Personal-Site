@@ -38,7 +38,7 @@ const AnalyticsDashboard = () => {
   };
 
   const handleVariantSwitch = () => {
-    const newVariant = variant === 'blue' ? 'purple' : 'blue';
+    const newVariant = variant === 'blue' ? 'indigo' : 'blue';
     switchVariant(newVariant);
   };
 
@@ -139,7 +139,7 @@ const AnalyticsDashboard = () => {
                           onClick={handleVariantSwitch}
                           className="px-3 py-1 bg-slate-700 text-slate-300 rounded text-sm hover:bg-slate-600 transition-colors"
                         >
-                          Switch to {variant === 'blue' ? 'Purple' : 'Blue'}
+                          Switch to {variant === 'blue' ? 'Indigo' : 'Blue'}
                         </button>
                       </div>
                       <div className="text-2xl font-bold text-cyan-400 capitalize">{variant}</div>

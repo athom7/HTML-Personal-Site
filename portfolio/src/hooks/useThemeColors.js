@@ -39,19 +39,19 @@ export const useThemeColors = () => {
       bgGlow2: 'bg-purple-500/10',
       colorScheme
     },
-    [VARIANTS.PURPLE]: {
-      variant: VARIANTS.PURPLE,
-      gradient: 'from-purple-500 to-pink-600',
-      gradientHover: 'hover:shadow-purple-500/50',
-      text: 'text-purple-400',
-      textHover: 'hover:text-purple-300',
-      textDark: 'text-purple-600',
-      border: 'border-purple-500',
-      borderHover: 'hover:border-purple-500',
-      bgPrimary: 'bg-purple-500',
-      bgSecondary: 'bg-pink-600',
-      bgGlow: 'bg-purple-500/10',
-      bgGlow2: 'bg-pink-500/10',
+    [VARIANTS.INDIGO]: {
+      variant: VARIANTS.INDIGO,
+      gradient: 'from-indigo-600 to-purple-700',
+      gradientHover: 'hover:shadow-indigo-500/50',
+      text: 'text-indigo-400',
+      textHover: 'hover:text-indigo-300',
+      textDark: 'text-indigo-600',
+      border: 'border-indigo-500',
+      borderHover: 'hover:border-indigo-500',
+      bgPrimary: 'bg-indigo-600',
+      bgSecondary: 'bg-purple-700',
+      bgGlow: 'bg-indigo-500/10',
+      bgGlow2: 'bg-purple-500/10',
       colorScheme
     }
   };

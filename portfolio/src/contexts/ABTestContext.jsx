@@ -6,7 +6,7 @@ const ABTestContext = createContext();
 // Available variants
 export const VARIANTS = {
   BLUE: 'blue',
-  PURPLE: 'purple'
+  INDIGO: 'indigo'
 };
 
 // Color schemes for each variant
@@ -30,24 +30,24 @@ export const COLOR_SCHEMES = {
     text: 'text-blue-600',
     bg: 'bg-blue-600'
   },
-  [VARIANTS.PURPLE]: {
-    name: 'Playful Purple',
+  [VARIANTS.INDIGO]: {
+    name: 'Corporate Indigo',
     primary: {
-      50: '#faf5ff',
-      100: '#f3e8ff',
-      200: '#e9d5ff',
-      300: '#d8b4fe',
-      400: '#c084fc',
-      500: '#a855f7',
-      600: '#9333ea',
-      700: '#7e22ce',
-      800: '#6b21a8',
-      900: '#581c87',
+      50: '#eef2ff',
+      100: '#e0e7ff',
+      200: '#c7d2fe',
+      300: '#a5b4fc',
+      400: '#818cf8',
+      500: '#6366f1',
+      600: '#4f46e5',
+      700: '#4338ca',
+      800: '#3730a3',
+      900: '#312e81',
     },
-    gradient: 'from-purple-600 to-pink-600',
-    hover: 'hover:bg-purple-700',
-    text: 'text-purple-600',
-    bg: 'bg-purple-600'
+    gradient: 'from-indigo-600 to-purple-700',
+    hover: 'hover:bg-indigo-700',
+    text: 'text-indigo-600',
+    bg: 'bg-indigo-600'
   }
 };
 
