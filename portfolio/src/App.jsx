@@ -6,6 +6,8 @@ import Skills from './components/Skills'
 import Achievements from './components/Achievements'
 import Contact from './components/Contact'
 import Navigation from './components/Navigation'
+import AnalyticsDashboard from './components/AnalyticsDashboard'
+import { trackSectionVisit, updateSessionEnd } from './utils/analytics'
 
 function App() {
   const [activeSection, setActiveSection] = useState('home')
@@ -21,11 +23,25 @@ function App() {
         }
         return false
       })
-      if (current) setActiveSection(current)
+      if (current) {
+        setActiveSection(current)
+        // Track section visit
+        trackSectionVisit(current)
+      }
     }
 
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  // Update session end time when user leaves
+  useEffect(() => {
+    const handleBeforeUnload = () => {
+      updateSessionEnd()
+    }
+
+    window.addEventListener('beforeunload', handleBeforeUnload)
+    return () => window.removeEventListener('beforeunload', handleBeforeUnload)
   }, [])
 
   return (
@@ -37,6 +53,7 @@ function App() {
       <Skills />
       <Achievements />
       <Contact />
+      <AnalyticsDashboard />
     </div>
   )
 }
